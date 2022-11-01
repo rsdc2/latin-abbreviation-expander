@@ -1,0 +1,172 @@
+body {
+    background-color: rgb(145, 221, 231);
+    font-family: sans-serif;
+  }
+
+h1 {
+    color: black;
+}
+
+footer {
+    font-size: small;
+}
+
+button.tablinks {
+    min-width: 150px;
+    border-color: black;
+    background-color: rgb(145, 221, 231);
+    transition: background-color 1s;
+    font-size: large;
+}
+
+button.tablinks:hover {
+    min-width: 150px;
+    border-color: black;
+    transition: background-color 1s,;
+    background-color: #f1c0c0;
+}
+
+button.tablinks:active {
+    min-width: 150px;
+    border-color: black;
+    background-color: #f1c0c0;
+    font-size: large;
+}
+
+button.tabContent {
+    border-radius: 5px;
+    height: 35px;
+    background-color: rgb(145, 221, 231);
+    font-size: medium;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: background-color 1s;
+}
+
+button.tabContent:hover {
+    border-radius: 5px;
+    height: 35px;
+    font-size: medium;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: background-color 1s;
+    background-color: #f1c0c0;
+}
+
+div.context {
+    border-radius: 10px;
+}
+
+div.abbrExpander {
+    border-collapse: collapse;
+    margin: 25px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.315);
+    padding: 12px 15px;
+    border-radius: 10px;
+    max-width: 900px;
+}
+
+div#notes li {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+div.footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 900px;
+}
+
+div.footer p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+input {
+    transition: background-color 1s, transform 1s;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+}
+
+input.context:hover {
+    transition: background-color 1s, transform 1s;
+    background-color: #f1c0c0;
+    border-radius: 10px;
+    padding: 5px;
+    height: 25px;
+    font-size: medium
+}
+
+input.context {
+    height: 25px;
+    width: 160px;
+}
+
+input.radio {
+    width: 30px;
+}
+
+table.input {
+    vertical-align: top;
+    text-align: center;
+}
+
+table.search-type {
+    margin-bottom: 20px;
+}
+
+table.search-type td {
+    padding-right: 15px;
+}
+
+#sidebar {
+    min-width: 210px;
+    display: table-cell;
+}
+
+#content {
+    display: table-cell;
+    width: 100%;
+}
+
+.dataTable {
+    padding: 15px;
+    border-collapse: collapse;
+
+}
+
+.dataTable tr {
+    padding: 10px;
+    border: none;
+    border-collapse: collapse;
+    margin-bottom: 10px
+}
+
+
+.dataTable tr:nth-child(even) {
+    background: whitesmoke;
+    border: whitesmoke;
+    border-collapse: collapse;
+}
+
+.dataTable td {
+    padding: 10px;
+    border: none;
+    border-collapse: collapse;
+    max-width: 140px;
+}
+
+.dataTable tr {
+    font-size: small;
+    border-collapse: collapse;
+}
+
+.dataTable#tbl_expansions tr:nth-child(1) {
+    font-size: large
+}
+
+.dataTable#tbl_expansions tr:nth-child(2) {
+    font-size: medium
+}

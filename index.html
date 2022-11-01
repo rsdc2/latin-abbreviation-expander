@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/styles.css">
+      </head>
+    <body>
+        <div class="tabcontent" id="content">
+            <h1>Latin Abbreviation Expander</h1>
+
+            <div id="loading" class="abbrExpander">
+                <h2>Loading data (this may take a while)...</h2>
+            </div>
+
+            <div hidden class="abbrExpander" id="div_context">
+
+                <h2>Contextual variables</h2>
+
+                <table class="search-type">
+                    <tr>
+                        <td>
+                            <input type="radio" name="search_type" value="exact" id="exactRadio" checked> 
+                            <label for="search_type">Exact</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="search_type" value="regex" id="regexRadio">
+                            <label for="search_type">Regex</label>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="input">
+                    <tr>
+                        <td>
+                            <label for="prev_prev">Word -2</label>
+                        </td>
+                        <td>
+                            <label for="prev">Word -1</label>
+                        </td>
+                        <td>
+                            <label for="abbr">Abbreviation</label>
+                        </td>
+                        <td>
+                            <label for="next">Word +1</label>
+                        </td>
+                        <td>
+                            <label for="next_next">Word +2</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="context" type="text" name="prev_prev" value="" id="txtPrevPrev">                            
+                        </td>
+                        <td>
+                            <input class="context" type="text" name="prev" value="" id="txtPrev">                            
+                        </td>
+                        <td>
+                            <input class="context" type="text" name="abbr" value="" id="txtAbbr">                            
+                        </td>     
+                        <td>
+                            <input class="context" type="text" name="next" value="" id="txtNext">                            
+                        </td>                        
+                        <td>
+                            <input class="context" type="text" name="next_next" value="" id="txtNextNext">                            
+                        </td>
+                    </tr>
+                </table>
+    
+                <button class="tabContent" id="btnExpand">Expand</button>
+                <button class="tabContent" onclick="clearResultsUI()">Clear results</button>
+                <button class="tabContent" onclick="clearSearchUI()">Clear search</button>
+                <button class="tabContent" onclick="clearSearchUI();clearResultsUI()">Clear all</button>
+                <button class="tabContent" onclick="exampleExactSearch()">Example exact expansion</button>
+                <button class="tabContent" onclick="exampleRegexSearch()">Example regex expansion</button>
+            </div>
+            
+            <div class="abbrExpander" id="div_expansions" hidden>
+                <h2>Expansions</h2>
+                <h3 hidden class="ellipse_expand">...</h3>
+                <table class="dataTable" id="tbl_expansions"></table>
+            </div>
+
+            <div class="abbrExpander" id="div_examples" hidden>
+                <h2>Examples</h2>
+                <h3 hidden class="ellipse_expand">...</h3>
+                <table class="dataTable" id="tbl_examples"></table>
+            </div>
+
+            <div class="abbrExpander" id="notes" hidden>
+                <h3>Notes</h3>
+                <ul>
+                    <li>Context variable fields relate to full forms: a proxy for finding a sequence of abbreviated forms around an abbreviation is to use the regex search feature.</li>
+                    <li>The underlying dataset on which the model is built is that of the <a href="https://edh.ub.uni-heidelberg.de/" target="_blank">EDH corpus</a>. HD numbers refer to inscriptions in that corpus.</li>
+                    <li>Regex expressions only apply to context fields, not the abbreviation field: entering "s.+" as an abbreviation will return no results.</li>
+                    <li>Searches are case insensitive: using "faciendum" and "FACIENDUM" will return the same results.</li>
+                    <li>Searches are insensitive to the distinction between "U" and "V": using "FACIENDVM" and "FACIENDUM" will return the same results.</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <p>The Latin Abbreviation Expander software was written by Robert Crellin as part of the Crossreads project at the Faculty of Classics, University of Oxford, and is licensed under the MIT license. This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No 885040, “Crossreads”). Abbreviation data are derived from the <a href="https://edh.ub.uni-heidelberg.de/" target="_blank">EDH corpus</a> released under the  <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a> licence.</p>
+            </div>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
+    <script src="build/types.js"></script>
+    <script src="build/globals.js"></script>
+    <script src="data/all_data_int.js"></script>
+    <script src="data/all_model_int.js"></script>
+    <script src="data/all_data_int_lookup.js"></script>
+    <script src="data/all_data_int_column_names.js"></script>
+    <script src="build/data.js"></script>
+    <script src="build/index.js"></script>
+</html>
