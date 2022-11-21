@@ -2,9 +2,15 @@
 
 The source code for the Latin Abbreviation Expander is written in [TypeScript](https://www.typescriptlang.org/) and transpiled to JavaScript (ECMAScript 2019).
 
-## Run
+## Online access
 
-Open ```index.html``` in a browser.
+The Abbreviation Expander can be run by following this link:
+
+[https://rsdc2.github.io/latin-abbreviation-expander/](https://rsdc2.github.io/latin-abbreviation-expander/)
+
+## Run on local machine
+
+Download files and open ```index.html``` in a browser.
 
 ## Build
 
