@@ -56,6 +56,7 @@ function enableButtons() {
     document.querySelectorAll(".btn").forEach((elem) => elem.removeAttribute("disabled"));
 }
 function exampleExactSearch() {
+    document.querySelector('#regexRadio').removeAttribute("checked");
     document.querySelector('#exactRadio').setAttribute("checked", "checked");
     const [prevPrevInput, prevInput, abbrInput, nextInput, nextNextInput] = ["txtPrevPrev", "txtPrev", "txtAbbr", "txtNext", "txtNextNext"]
         .map((item) => document.getElementById(item));
@@ -64,6 +65,7 @@ function exampleExactSearch() {
     expandBtn.click();
 }
 function exampleRegexSearch() {
+    document.querySelector('#exactRadio').removeAttribute("checked");
     document.querySelector('#regexRadio').setAttribute("checked", "checked");
     const [prevPrevInput, prevInput, abbrInput, nextInput, nextNextInput] = ["txtPrevPrev", "txtPrev", "txtAbbr", "txtNext", "txtNextNext"]
         .map((item) => document.getElementById(item));
