@@ -73,6 +73,7 @@ function enableButtons() {
 }
 
 function exampleExactSearch() {
+    document.querySelector('#regexRadio').removeAttribute("checked")
     document.querySelector('#exactRadio').setAttribute("checked", "checked")
     const [prevPrevInput, prevInput, abbrInput, nextInput, nextNextInput] =
         ["txtPrevPrev", "txtPrev", "txtAbbr", "txtNext", "txtNextNext"]
@@ -84,6 +85,7 @@ function exampleExactSearch() {
 }
 
 function exampleRegexSearch() {
+    document.querySelector('#exactRadio').removeAttribute("checked")
     document.querySelector('#regexRadio').setAttribute("checked", "checked")
     const [prevPrevInput, prevInput, abbrInput, nextInput, nextNextInput] =
         ["txtPrevPrev", "txtPrev", "txtAbbr", "txtNext", "txtNextNext"]
