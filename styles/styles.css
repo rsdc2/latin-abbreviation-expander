@@ -146,8 +146,8 @@ table.search-type td {
 
 
 .dataTable tr:nth-child(even) {
-    background: whitesmoke;
-    border: whitesmoke;
+    background: white;
+    border: white;
     border-collapse: collapse;
 }
 
