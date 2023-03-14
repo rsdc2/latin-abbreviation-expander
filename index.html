@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/toolbar.css">
+        <link rel="stylesheet" href="styles/context.css">
+        <link rel="stylesheet" href="styles/data.css">
+    </head>
+    <body>
+        <!-- <div class="main" id="content"> -->
+            <div class="main title">
+                <h1>Latin Abbreviation Expander</h1>
+            </div>
+
+            <div id="loading" class="abbr-expander section title">
+                <h2>Loading data (this may take a while)...</h2>
+            </div>
+
+            <div hidden class="abbr-expander context main" id="divContext">
+                <div class="context title">
+                    <!-- <h2>Contextual variables</h2> -->
+                </div>
+
+                <div class="input search-type">
+                    <table class="search-type">
+                        <tr>
+                            <td>
+                                <input type="radio" name="search_type" value="exact" id="exactRadio" checked> 
+                                <label for="search_type">Exact</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="search_type" value="regex" id="regexRadio">
+                                <label for="search_type">Regex</label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>  
+                
+                <div class="input context">
+                    <ul class="input context">
+                        <li>
+                            <table>
+                                <tbody>
+                                    <tr class="heading"><td><label for="prev_prev">Word -2</label></td></tr>
+                                    <tr><td><input class="context" type="text" name="prev_prev" value="" id="txtPrevPrev"></td></tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tbody>
+                                    <tr class="heading"><td><label for="prev">Word -1</label></td></tr>
+                                    <tr><td><input class="context" type="text" name="prev" value="" id="txtPrev"></td></tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tbody>
+                                    <tr class="heading"><td><label for="abbr">Abbreviation</label></td></tr>
+                                    <tr><td><input class="context" type="text" name="abbr" value="" id="txtAbbr"></td></tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tbody>
+                                    <tr class="heading"><td><label for="next">Word +1</label></td></tr>
+                                    <tr><td><input class="context" type="text" name="next" value="" id="txtNext"></td></tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>
+                            <table>
+                                <tbody>
+                                    <tr class="heading"><td><label for="next_next">Word +2</label></td></tr>
+                                    <tr><td><input class="context" type="text" name="next_next" value="" id="txtNextNext"></td></tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="toolbar">
+                    <ul>
+                        <li><button id="btnExpand">Expand</button></li>
+                        <li><button onclick="clearResultsUI()">Clear results</button></li>
+                        <li><button onclick="clearSearchUI()">Clear search</button></li>
+                        <li><button onclick="clearSearchUI();clearResultsUI()">Clear all</button></li>
+                        <li><button onclick="exampleExactSearch()">Example exact expansion</button></li>
+                        <li><button onclick="exampleRegexSearch()">Example regex expansion</button></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="abbr-expander expansions data" id="divExpansions" hidden>
+                <div class="section title">
+                    <h2>Expansions</h2>
+                </div>
+                <h3 hidden class="ellipse-expand">...</h3>
+                
+                <div class="table">
+                    <table class="data expansions" id="tblExpansions"></table>
+                </div>
+            </div>
+
+            <div class="abbr-expander examples data" id="divExamples" hidden>
+                <div class="section title">
+                    <h2>Examples</h2>
+                </div>
+                <h3 hidden class="ellipse-expand">...</h3>
+                <div class="table">
+                    <table class="data examples" id="tblExamples"></table>
+                </div>
+            </div>
+
+            <div class="abbr-expander" id="notes" hidden>
+                <div class="section title">
+                    <h3>Notes</h3>
+                </div>
+                <div>
+                    <ul>
+                        <li>Context variable fields relate to full forms: a proxy for finding a sequence of abbreviated forms around an abbreviation is to use the regex search feature.</li>
+                        <li>The underlying dataset on which the model is built is that of the <a href="https://edh.ub.uni-heidelberg.de/" target="_blank">EDH corpus</a>. HD numbers refer to inscriptions in that corpus.</li>
+                        <li>Regex expressions only apply to context fields, not the abbreviation field: entering "s.+" as an abbreviation will return no results.</li>
+                        <li>Searches are case insensitive: using "faciendum" and "FACIENDUM" will return the same results.</li>
+                        <li>Searches are insensitive to the distinction between "U" and "V": using "FACIENDVM" and "FACIENDUM" will return the same results.</li>
+                    </ul>
+                </div>
+            </div>
+        <!-- </div> -->
+
+        <footer>
+            <div class="section title">
+            </div>
+            <div class="footer">
+                <p>The software for the Latin Abbreviation Expander was written by Robert Crellin as part of the Crossreads project at the Faculty of Classics, University of Oxford, and is licensed under the MIT license. This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No 885040, “Crossreads”). Abbreviation data are derived from the <a href="https://edh.ub.uni-heidelberg.de/" target="_blank">EDH corpus</a>, as of 15th December 2021, released under the  <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank">CC BY-SA 4.0</a> licence. For further details see <a href="https://github.com/rsdc2/latin-abbreviation-expander" target="_blank">the source code on Github</a>.</p> 
+            </div>
+        </footer>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
+    <script src="build/types.js"></script>
+    <script src="build/globals.js"></script>
+    <script src="data/all_data_int.js"></script>
+    <script src="data/all_model_int.js"></script>
+    <script src="data/all_data_int_lookup.js"></script>
+    <script src="data/all_data_int_column_names.js"></script>
+    <script src="build/data.js"></script>
+    <script src="build/index.js"></script>
+</html>

@@ -1,0 +1,79 @@
+div.context {
+    background-color: rgb(0, 174, 255);
+    padding-bottom: 7.5px;
+    width: 100vw
+}
+
+div.context.main {
+    margin-top: 15px;
+}
+
+div.context.input {
+    width: fit-content;
+    max-width: 90vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 7.5px;
+    background-color: blue;
+}
+
+div.input.search-type {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-left: 7.5px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: fit-content;
+    background-color: blue;
+    color: whitesmoke;
+    font-size: smaller
+}
+
+input[type=text].context {
+    padding: 7.5px;
+    width: fit-content;
+    font-size: medium;
+    min-width: 7.5px;    
+}
+
+ul.input {
+    list-style-type: none;
+    border-color: bisque;
+    overflow-y: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: blue;
+    width: fit-content;
+    padding: 15px
+}
+
+ul.input li {
+    display: inline;
+}
+
+ul.input table {
+    width:fit-content;
+    display: inline;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    box-sizing: content-box;
+    width: 100%;
+}   
+
+ul.input li table td {
+    background-color: blue;
+    text-align: center;
+    width: 100%;
+    color: whitesmoke;
+    padding-top: 0px;
+    padding-bottom: 7.5px;
+    border-collapse: collapse;
+}

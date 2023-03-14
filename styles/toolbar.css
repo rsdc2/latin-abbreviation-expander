@@ -1,0 +1,47 @@
+div.toolbar {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  width: fit-content;
+  max-width: 90vw;
+  background-color: blue;
+}
+
+div.toolbar ul {
+  background-color: inherit;
+  list-style-type: none;
+  padding: 0px;
+  border-color: bisque;
+  overflow-y: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+div.toolbar ul li {
+  display: inline;
+  width: 100%
+}
+
+div.toolbar ul button {
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  display: inline;
+  border: none;
+  margin: 0px;
+  font-size: medium;
+}
+
+div.toolbar ul button:hover {
+  background-color: orange;
+  color: black;
+}
+
+div.toolbar ul button:active {
+  background-color: red;
+  color: whitesmoke
+}

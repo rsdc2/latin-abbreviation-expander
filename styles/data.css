@@ -1,0 +1,52 @@
+div.data div.table {
+    background-color: rgb(0, 174, 255);
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-bottom: 15px;
+    padding-top: 15px
+}
+
+table.data {
+    color: black;
+    border-collapse: separate;
+    border-spacing: 3px;
+
+}
+
+table.data td {
+    border-collapse: collapse;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+
+table.data tr:nth-child(even) {
+    background-color: rgb(0, 195, 255);
+}
+
+
+table.data tr:nth-child(odd) {
+    background-color: rgb(0, 162, 255);
+}
+
+table.data td:nth-child(2) {
+    text-align: right;
+}
+
+
+
+div.table.data {
+    background-color: blue;
+}
+
+table#tblExpansions tr {
+    font-size: small;
+}
+
+table#tblExpansions tr:nth-child(1){
+    font-size: large;
+}
+
+table#tblExpansions tr:nth-child(2){
+    font-size: medium;
+}
+
