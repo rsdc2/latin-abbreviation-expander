@@ -22,7 +22,7 @@ npm install
 npx tsc
 ```
 
-## Attributions
+## Acknowledgements
 
 Latin Abbreviation Expander was written in [TypeScript](https://www.typescriptlang.org/) and uses [Danfo.js](https://danfo.jsdata.org/).
 
