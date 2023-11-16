@@ -24,7 +24,7 @@ npx tsc
 
 ## Acknowledgements
 
-Latin Abbreviation Expander was written in [TypeScript](https://www.typescriptlang.org/) and uses [Danfo.js](https://danfo.jsdata.org/) ([MIT](https://github.com/javascriptdata/danfojs/blob/dev/LICENCE)). (The license for `Danfo.js` is included in the `LICENSES` directory.)
+Latin Abbreviation Expander was written in [TypeScript](https://www.typescriptlang.org/) and uses [danfo.js](https://danfo.jsdata.org/) ([MIT](https://github.com/javascriptdata/danfojs/blob/dev/LICENCE)). (The license for `danfo.js` is included in the `LICENSES` directory.)
 
 The software for the Latin Abbreviation Expander was written by Robert Crellin as part of the Crossreads project at the Faculty of Classics, University of Oxford, and is licensed under the MIT license. This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No 885040, “Crossreads”).
 
