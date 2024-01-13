@@ -1,4 +1,4 @@
-# Latin Abbreviation Expander
+# Latin Abbreviation Expander (α)
 
 The source code for the Latin Abbreviation Expander is written in [TypeScript](https://www.typescriptlang.org/) and transpiled to JavaScript (ECMAScript 2019).
 
