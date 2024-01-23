@@ -11,4 +11,6 @@ var ParseMode;
     ParseMode["Strings"] = "Strings";
 })(ParseMode || (ParseMode = {}));
 class SeriesArr {
+    index;
+    values;
 }
