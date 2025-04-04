@@ -11,12 +11,6 @@ The source code for the Latin Abbreviation Expander is written in [TypeScript](h
 
 ![Alt text](assets/screenshot.png "Screenshot")
 
-## Online access
-
-The Abbreviation Expander can be run by following this link:
-
-[https://rsdc2.github.io/latin-abbreviation-expander/](https://rsdc2.github.io/latin-abbreviation-expander/)
-
 ## Run on local machine
 
 Download files and open ```index.html``` in a browser.
