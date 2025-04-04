@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
     <head>
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.jsdelivr.net 'unsafe-eval'" />
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/toolbar.css">
         <link rel="stylesheet" href="styles/context.css">
@@ -26,11 +27,11 @@
                         <tr>
                             <td>
                                 <input type="radio" name="search_type" value="exact" id="exactRadio" checked> 
-                                <label for="search_type">Exact</label>
+                                <label for="exactRadio">Exact</label>
                             </td>
                             <td>
                                 <input type="radio" name="search_type" value="regex" id="regexRadio">
-                                <label for="search_type">Regex</label>
+                                <label for="regexRadio">Regex</label>
                             </td>
                         </tr>
                     </table>
@@ -41,7 +42,7 @@
                         <li>
                             <table>
                                 <tbody>
-                                    <tr class="heading"><td><label for="prev_prev">Word -2</label></td></tr>
+                                    <tr class="heading"><td><label for="txtPrevPrev">Word -2</label></td></tr>
                                     <tr><td><input class="context" type="text" name="prev_prev" value="" id="txtPrevPrev"></td></tr>
                                 </tbody>
                             </table>
@@ -49,7 +50,7 @@
                         <li>
                             <table>
                                 <tbody>
-                                    <tr class="heading"><td><label for="prev">Word -1</label></td></tr>
+                                    <tr class="heading"><td><label for="txtPrev">Word -1</label></td></tr>
                                     <tr><td><input class="context" type="text" name="prev" value="" id="txtPrev"></td></tr>
                                 </tbody>
                             </table>
@@ -57,7 +58,7 @@
                         <li>
                             <table>
                                 <tbody>
-                                    <tr class="heading"><td><label for="abbr">Abbreviation</label></td></tr>
+                                    <tr class="heading"><td><label for="txtAbbr">Abbreviation</label></td></tr>
                                     <tr><td><input class="context" type="text" name="abbr" value="" id="txtAbbr"></td></tr>
                                 </tbody>
                             </table>
@@ -65,7 +66,7 @@
                         <li>
                             <table>
                                 <tbody>
-                                    <tr class="heading"><td><label for="next">Word +1</label></td></tr>
+                                    <tr class="heading"><td><label for="txtNext">Word +1</label></td></tr>
                                     <tr><td><input class="context" type="text" name="next" value="" id="txtNext"></td></tr>
                                 </tbody>
                             </table>
@@ -73,7 +74,7 @@
                         <li>
                             <table>
                                 <tbody>
-                                    <tr class="heading"><td><label for="next_next">Word +2</label></td></tr>
+                                    <tr class="heading"><td><label for="txtNextNext">Word +2</label></td></tr>
                                     <tr><td><input class="context" type="text" name="next_next" value="" id="txtNextNext"></td></tr>
                                 </tbody>
                             </table>
@@ -84,11 +85,11 @@
                 <div class="toolbar">
                     <ul>
                         <li><button id="btnExpand">Expand</button></li>
-                        <li><button onclick="clearResultsUI()">Clear results</button></li>
-                        <li><button onclick="clearSearchUI()">Clear search</button></li>
-                        <li><button onclick="clearSearchUI();clearResultsUI()">Clear all</button></li>
-                        <li><button onclick="exampleExactSearch()">Example exact expansion</button></li>
-                        <li><button onclick="exampleRegexSearch()">Example regex expansion</button></li>
+                        <li><button id="btnClearResults">Clear results</button></li>
+                        <li><button id="btnClearSearch">Clear search</button></li>
+                        <li><button id="btnClearAll">Clear all</button></li>
+                        <li><button id="btnExampleExact">Example exact expansion</button></li>
+                        <li><button id="btnExampleRegex">Example regex expansion</button></li>
                     </ul>
                 </div>
             </div>

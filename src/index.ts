@@ -1,6 +1,10 @@
 // const fileInput = document.getElementById("input");
 const expandBtn = document.getElementById("btnExpand")
-const clearBtn = document.getElementById("btnClear")
+const clearResultsBtn = document.getElementById("btnClearResults")
+const clearSearchBtn = document.getElementById("btnClearResults")
+const clearAllBtn = document.getElementById("btnClearAll")
+const exampleExactSearchBtn = document.getElementById("btnExampleExact")
+const exampleRegexSearchBtn = document.getElementById("btnExampleRegex")
 // const setModelBtn = document.getElementById("setModelBtn")
 
 function setModel() {
@@ -175,6 +179,14 @@ function replace <T extends string | number>(searchValue: string, replaceValue: 
     }
     return _replace
 }
+
+clearResultsBtn.onclick = clearResultsUI
+clearAllBtn.onclick = () => {
+    clearResultsUI();
+    clearSearchUI()
+}
+exampleExactSearchBtn.onclick = exampleExactSearch
+exampleRegexSearchBtn.onclick = exampleRegexSearch
 
 
 expandBtn.onclick = (e) => {
